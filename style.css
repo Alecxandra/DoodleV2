@@ -1,0 +1,133 @@
+@import url(http://fonts.googleapis.com/css?family=Clicker+Script);
+
+body { background: #0A0A2A; }
+
+div{
+  display: block;
+  position: absolute;
+  top:0; bottom:0; left:0; right:0;
+}
+
+.wrapper{
+  height: 400px;
+  width: 600px;
+  margin: auto;
+  
+}
+
+.cloud {
+  background: #fff;
+  width: 90px;
+  height: 42px; 
+  -webkit-animation: clouds 40s infinite;
+  margin-left: 0;
+}
+
+.cloud:before {
+    border-radius: 50%;
+    box-shadow: 20px -20px 0 0 #fff,
+                90px 0 0 0 #fff,
+                60px -27px 0 8px #fff;
+    content: "";
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    left: -22px;
+    bottom: 0;
+    background: #fff;
+}
+
+.cloud:nth-child(1){ top: auto; bottom: 120px; opacity: 0.85}
+.cloud:nth-child(2){ right: auto; left: 320px; opacity: 0.5}
+.cloud:nth-child(3){ bottom: auto; top: 120px; right: auto; left: 80px; opacity: 0.75;}
+.cloud:nth-child(4){ bottom: auto; top: 20px; right: auto; left: 320px; opacity: 0.65;}
+
+.moon {
+  height: 120px;
+  width: 120px;
+  background: #666666;
+  border-radius: 60px;
+  box-shadow: 0 0 60px 1px #444444;
+}
+
+.moon:before {
+    border-radius: 60px;
+    box-shadow: 10px -50px 0 0 #444,
+                50px 0 0 0 #444,
+                50px -37px 0 10px #444;
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 30px;
+    bottom: 10px;
+    background: #444;
+}
+
+
+
+
+
+
+
+
+.wrapper:hover .cat{
+  bottom: 240px;
+}
+
+@-webkit-keyframes clouds /*Safari and Chrome*/ {
+0 {margin-left:0;}
+25% {margin-left:100px;}
+50% {margin-left:0;}
+75% {margin-left:30px;}  
+100% {margin-left: 0;}
+}
+
+
+
+
+
+.wrapper:hover h1{
+  opacity: 1;
+}
+.fantasma{
+  width:100%;
+  height:100%
+  
+}
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -64.5px;
+  margin-top: -100px;
+  width:100%;
+  height:100%  
+}
+
+.ghost {
+  animation: bounceIn 3s;
+  animation: float 5s ease-out infinite;
+}
+
+@keyframes float {
+  0%{
+   filter: alpha(opacity=100);
+   opacity: 0.5;
+  }
+  20%{
+    filter: alpha(opacity=100);
+   opacity: 0.1;
+    
+  }
+ 
+  50% {
+    filter: alpha(opacity=100);
+   opacity: 0.0;
+     transform: translate(-5px, 300px);
+  }
+  
+}
+
+
+
